@@ -6,7 +6,7 @@ AppLearn is the new App for Android and iOS mobile
 
 ## Getting started
 
-Follow this steps to get your Kardham-Connect app and running on your local machine or emulator
+Follow this steps to get your AppLearn app and running on your local machine or emulator
 
 ### Prerequisites
 
