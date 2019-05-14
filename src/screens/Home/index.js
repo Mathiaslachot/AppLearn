@@ -8,18 +8,25 @@
 
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import { Button } from 'react-native-elements';
 import styles from './styles'
 
 
 
 export default class Home extends Component {
+
+  goToNextPage = () => {
+    const {navigation} = this.props;
+    navigation.navigate('Page');
+  };
+
   render() {
     return (
       <View style={styles.container}>
         <Button
         title="Solid Button" 
+        onPress={this.goToNextPage}
         />
       </View>
     );
