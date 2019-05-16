@@ -25,15 +25,25 @@ export default StyleSheet.create({
      justifyContent: 'center'
    },
    buttonTouch: {
+    shadowColor: "#000",
+     shadowOffset: {
+     	width: 0,
+     	height: 2,
+     },
+     shadowOpacity: 0.18,
+     shadowRadius: 8.00,
+     elevation: 14,
      width:140,
      height:100,
      color:'red',
-     marginRight:30,
+     marginRight:5,
+     marginLeft:17,
      marginTop:30,
+     marginBottom:30,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 16,
-    margin: 16,
+    margin: 10,
     paddingVertical: 24,
    },
    logoTop:{
