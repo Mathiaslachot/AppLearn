@@ -53,7 +53,7 @@ export default class Home extends Component {
 
   goToNextPage = () => {
     const {navigation} = this.props;
-    navigation.navigate('Deatil');
+    navigation.navigate('Zest');
   };
 
   render() {
@@ -77,7 +77,7 @@ console.log({matieres})
 
     
     return (
-        <ScrollView style={{flex:1, flexDirection:'column'}}>
+        <ScrollView style={{flex:1, flexDirection:'column'}} bounces='false'>
         <Image source={imgTop} style={styles.logoTop} resizeMode="stretch" />
         <Text style={styles.titleTopic}>Les Topics</Text>
         <ListMatiere
@@ -100,7 +100,7 @@ console.log({matieres})
         data={coursDesign}
          title='Web Design'
         />
-        <View style={{height:100}}></View>
+        <View style={{paddingTop:200}}></View>
         </ScrollView>
         
 

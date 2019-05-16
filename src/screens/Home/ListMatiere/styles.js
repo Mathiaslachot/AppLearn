@@ -12,7 +12,7 @@ export default StyleSheet.create({
     fontSize:17, 
     fontWeight: 'bold', 
     color:'#343434',
-    left:'4.8%',
+    left:'9.8%',
     top:'6%'
    },
    scroll: {
@@ -57,8 +57,11 @@ export default StyleSheet.create({
    logoCours:{
     width:20,
     height:20,
-    left:'70%',
+    left:'50%',
     top:'20%'
     
+   },
+   logoRectangle:{
+    top:8, right:10, left: 2
    }
 });

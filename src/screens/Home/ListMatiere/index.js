@@ -10,6 +10,7 @@
 import React, {Component} from 'react';
 import { Text, ScrollView, ActivityIndicator, View, FlatList, TouchableOpacity, Image } from 'react-native';
 import styles from './styles'
+import imgRectangle from './../../../../public/assets/images/rectangle.png';
 
 
 
@@ -22,7 +23,10 @@ export default class ListMatiere extends Component {
     const {dataMatiere, data, title} = this.props;
     console.log({data})
     return (<View style={styles.container}>
+        <View style={{flexDirection:'row', left:'4%'}}>
+        <Image source={imgRectangle} style={styles.logoRectangle} />
         <Text style={styles.titleTopic}>{title}</Text>
+        </View>
         <ScrollView style={styles.scroll}>
           <FlatList
               contentContainerStyle={{alignSelf:'flex-start', backgroundColor:'transparent'}}
@@ -35,11 +39,12 @@ export default class ListMatiere extends Component {
                 <TouchableOpacity
                 style={[styles.buttonTouch, {backgroundColor:item.color}]}
                
-                onPress={() => {
-                         this.props.navigation.navigate('Deatil', {
-                           boardkey: `${JSON.stringify(item.key)}`,
-                         });
-                       }}>
+                // onPress={() => {
+                //          this.props.navigation.navigate('Zest', {
+                //            boardkey: `${JSON.stringify(item.key)}`,
+                //          });
+                //        }}
+                >
                   <View>
                        <Text style={{color:'white', fontSize:15, fontWeight:'bold',top:'20%'}}>{item.name}</Text>
                        <Image source={{uri:item.icon}} style={styles.logoCours} />
