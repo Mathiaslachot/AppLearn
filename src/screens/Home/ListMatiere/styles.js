@@ -5,10 +5,20 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
+    flex: 1,
+    top:'10%',
+   },
+   titleTopic: {
+    fontSize:17, 
+    fontWeight: 'bold', 
+    color:'#343434',
+    left:'4.8%',
+    top:'6%'
+   },
+   scroll: {
     flexWrap: 'wrap',
     height:'15%',
     backgroundColor:'transparent',
-    top:'10%'
    },
    item: {
      padding: 10,
@@ -28,12 +38,13 @@ export default StyleSheet.create({
      width:140,
      height:100,
      color:'red',
-     marginRight:30,
+     marginRight:5,
      marginTop:30,
+     marginBottom:30,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 16,
-    margin: 16,
+    margin: 10,
     paddingVertical: 24,
    },
    logoTop:{
@@ -48,12 +59,6 @@ export default StyleSheet.create({
     height:20,
     left:'70%',
     top:'20%'
-   },
-   titleTopic: {
-    fontSize:30, 
-    fontWeight: '900', 
-    margin: 40, 
-    top: '10%', 
-    color:'#343434' 
+    
    }
 });

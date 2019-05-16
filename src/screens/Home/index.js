@@ -8,10 +8,13 @@
 
 
 import React, {Component} from 'react';
-import { StyleSheet, ScrollView, ActivityIndicator, View, FlatList, TouchableOpacity } from 'react-native';
+import { Text, ScrollView, ActivityIndicator, View, FlatList, TouchableOpacity, Image } from 'react-native';
 import { List, ListItem, Button, Icon  } from 'react-native-elements';
 import styles from './styles'
 import firebase from '../../module/Firebase';
+import imgTop from './../../../public/assets/images/illu.png';
+import ListMatiere from './ListMatiere'
+
 
 export default class Home extends Component {
 
@@ -32,12 +35,14 @@ export default class Home extends Component {
   onCollectionMatiere = (querySnapshot) => {
     const matieres = [];
     querySnapshot.forEach((doc) => {
-      const { name, description } = doc.data();
+      const { name, description, color, icon } = doc.data();
       matieres.push({
         key: matieres.id,
         doc,
         name,
         description,
+        color,
+        icon
       });
     });
     this.setState({
@@ -53,10 +58,14 @@ export default class Home extends Component {
 
   render() {
 
-if (this.state.matieres) {
-  const matieres = this.state.matieres
-  console.log({matieres})
-}
+const {matieres} = this.state
+
+const coursDesign = matieres.filter(cours => cours.description === 'Web Design')
+const coursTrans = matieres.filter(cours => cours.description === 'Enseignements transverses')
+const coursDev = matieres.filter(cours => cours.description === 'Web Development')
+const coursBusiness = matieres.filter(cours => cours.description === 'E-Business')
+console.log({matieres})
+
 
     if(this.state.isLoading){
       return(
@@ -65,46 +74,35 @@ if (this.state.matieres) {
         </View>
       )
     }
+
+    
     return (
-
-        // <ScrollView style={styles.container}>
-        //   <List>
-        //     {
-        //       this.state.matieres.map((item, i) => (
-        //         <ListItem
-        //           key={i}
-        //           title={item.name}
-        //           onPress={() => {
-        //             this.props.navigation.navigate('Deatil', {
-        //               boardkey: `${JSON.stringify(item.key)}`,
-        //             });
-        //           }}
-        //         />
-        //       ))
-        //     }
-        //   </List>
-        // </ScrollView>
-
-        <View style={styles.container}>
-          <FlatList
-              data={this.state.matieres}
-              renderItem={({ item }) => (
-                <TouchableOpacity
-                onPress={() => {
-                         this.props.navigation.navigate('Deatil', {
-                           boardkey: `${JSON.stringify(item.key)}`,
-                         });
-                       }}>
-                <ListItem
-                chevronColor="black"
-                chevron
-                title={item.name}
-                />
-                </TouchableOpacity>
-              )}
-              keyExtractor={item=>item.name}
-            />
-        </View>
+        <ScrollView style={{flex:1, flexDirection:'column'}}>
+        <Image source={imgTop} style={styles.logoTop} resizeMode="stretch" />
+        <Text style={styles.titleTopic}>Les Topics</Text>
+        <ListMatiere
+        dataMatiere={this.state.matieres}
+        data={coursBusiness}
+        title='E-Business'
+        />
+        <ListMatiere
+        dataMatiere={this.state.matieres}
+        data={coursTrans}
+         title='Enseignements transverses'
+        />
+        <ListMatiere
+        dataMatiere={this.state.matieres}
+        data={coursDev}
+         title='Web Development'
+        />
+        <ListMatiere
+        dataMatiere={this.state.matieres}
+        data={coursDesign}
+         title='Web Design'
+        />
+        <View style={{height:100}}></View>
+        </ScrollView>
+        
 
     );
         }
@@ -114,9 +112,7 @@ if (this.state.matieres) {
 Home.navigationOptions = () => {
   return {
     title: "Landing Page",
-    headerStyle: {
-      backgroundColor: 'green',
-    },
+    header: null,
     headerTintColor: 'black',
     headerTintColor: '#ffffff',
   };
