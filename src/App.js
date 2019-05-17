@@ -36,7 +36,7 @@ class App extends Component {
       <View style={styles.container}>
         <RootNavigation />
         {this.state.gif &&
-        <Image resizeMode="stretch" style={{left:'4%'}} source={ImageGif}/>
+        <Image resizeMode="stretch" source={ImageGif}/>
         }
       </View>
     );

@@ -1,16 +1,16 @@
-# AppLearn (v1)
+# Leemon
 
-AppLearn is the new App for Android and iOS mobile
+Leemon is the new App for Android and iOS mobile
 
 ## 🚀 Made with React-Native on iOS and Android 🚀
 
 ## Getting started
 
-Follow this steps to get your AppLearn app and running on your local machine or emulator
+Follow this steps to get your Leemon app and running on your local machine or emulator
 
 ### Prerequisites
 
-You need to install [yarn](https://yarnpkg.com/en/docs/install) and [react-native](https://facebook.github.io/react-native/docs/getting-started) to running AppLearn on your local machine or emulator
+You need to install [yarn](https://yarnpkg.com/en/docs/install) and [react-native](https://facebook.github.io/react-native/docs/getting-started) to running Leemon on your local machine or emulator
 
 ### Installing
 
@@ -20,7 +20,7 @@ $ mkdir myfolder
 $ cd myfolder
 ```
 
-Clone the project `AppLearn`
+Clone the project `Leemon`
 ```
 $ git clone https://linkoftherepository.git
 ```
