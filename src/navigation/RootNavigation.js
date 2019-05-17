@@ -58,9 +58,9 @@ const App = createBottomTabNavigator(
         const {routeName} = navigation.state;
           switch (routeName) {
             case 'Home':
-              return <Image style={{height:20, width:20}} source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconMenu.png?alt=media&token=fefbf9da-f60e-4cb3-851b-414fce8bf2c0'}} />;
+              return <Image style={{height:20, width:20, top:'25%'}} source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconTopics.png?alt=media&token=15a24732-6834-43a2-b08b-34f7d1963356'}} />;
             case 'Zest':
-            return <Image style={{height:30, width:30, bottom:3}} resizeMode='contain' source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconZest.png?alt=media&token=5b79f770-dedb-47fe-a7e5-5c3938aff333'}} />;
+            return <Image style={{height:30, width:30, top:'13%'}} resizeMode='contain' source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconZest.png?alt=media&token=5b79f770-dedb-47fe-a7e5-5c3938aff333'}} />;
             default:
               break;
           
@@ -69,11 +69,11 @@ const App = createBottomTabNavigator(
     }),
     tabBarVisible: false,
     tabBarOptions: {
-      activeTintColor: 'red',
-      inactiveTintColor: 'black',
+      activeTintColor: '#fff',
+      inactiveTintColor: '#fff',
       style: {
         backgroundColor: '#fff',
-        height: 60,
+        height: 50,
         shadowColor: '#000',
         shadowOffset: {
           width: 0,

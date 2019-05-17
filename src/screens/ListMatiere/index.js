@@ -10,7 +10,7 @@
 import React, {Component} from 'react';
 import { Text, ScrollView, ActivityIndicator, View, FlatList, TouchableOpacity, Image } from 'react-native';
 import styles from './styles'
-import imgRectangle from './../../../../public/assets/images/rectangle.png';
+import imgRectangle from './../../../public/assets/images/rectangle.png';
 
 
 
@@ -19,8 +19,9 @@ export default class ListMatiere extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
-    const {dataMatiere, data, title} = this.props;
+    const {dataMatiere, data, title,navigation} = this.props;
     console.log({data})
     return (<View style={styles.container}>
         <View style={{flexDirection:'row', left:'4%'}}>
@@ -37,16 +38,13 @@ export default class ListMatiere extends Component {
               data={data}
               renderItem={({ item }) => (
                 <TouchableOpacity
-                style={[styles.buttonTouch, {backgroundColor:item.color}]}
-               
-                // onPress={() => {
-                //          this.props.navigation.navigate('Zest', {
-                //            boardkey: `${JSON.stringify(item.key)}`,
-                //          });
-                //        }}
-                >
+                style={[styles.buttonTouch, {backgroundColor:item.color}]}   
+                onPress={() => {navigation.navigate('Detail', {
+                  dataMatiere: item,
+                })}}>
+                
                   <View>
-                       <Text style={{color:'white', fontSize:15, fontWeight:'bold',top:'20%'}}>{item.name}</Text>
+                       <Text style={{color:'white', fontSize:15, fontWeight:'bold',top:'20%', margin:5}}>{item.name}</Text>
                        <Image source={{uri:item.icon}} style={styles.logoCours} />
                   </View>
                 </TouchableOpacity>

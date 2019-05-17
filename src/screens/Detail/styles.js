@@ -20,7 +20,7 @@ export default StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  logoTop:{
+   logoTop:{
     position: 'absolute',
     zIndex: 0,
     alignSelf: 'center',
@@ -28,19 +28,12 @@ export default StyleSheet.create({
     top: '0%',
    },
    logoBande:{
-    position: 'absolute',
-    zIndex: 0,
-    alignSelf: 'center',
-    right: '20%',
-    top: '0%',
-    width:'50%'
+    bottom:35,
+    width:'30%',
+    left:'30%'
    },
    logoDe:{
-    position: 'absolute',
-    zIndex: 0,
-    alignSelf: 'center',
-    right: '5%',
-    top: '70%',
+    left:'100%',
     width:'15%',
     height:'90%'
     },
@@ -87,5 +80,24 @@ export default StyleSheet.create({
   },
   logoRectangle:{
     top:8, right:10, left: 2
-   }
+   },
+   activity: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonTouch: {
+    backgroundColor: 'rgb(44, 182, 244)',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    borderRadius: 16,
+    marginBottom:10,
+    paddingVertical: 24,
+    height: 100,
+    width: '90%',
+  },
 });

@@ -13,7 +13,7 @@ import { List, ListItem, Button, Icon  } from 'react-native-elements';
 import styles from './styles'
 import firebase from '../../module/Firebase';
 import imgTop from './../../../public/assets/images/illu.png';
-import ListMatiere from './ListMatiere'
+import ListMatiere from './../ListMatiere'
 
 
 export default class Home extends Component {
@@ -51,11 +51,6 @@ export default class Home extends Component {
    });
   }
 
-  goToNextPage = () => {
-    const {navigation} = this.props;
-    navigation.navigate('Zest');
-  };
-
   render() {
 
 const {matieres} = this.state
@@ -81,26 +76,30 @@ console.log({matieres})
         <Image source={imgTop} style={styles.logoTop} resizeMode="stretch" />
         <Text style={styles.titleTopic}>Les Topics</Text>
         <ListMatiere
+        navigation={this.props.navigation}
+        dataMatiere={this.state.matieres}
+        data={coursDev}
+         title='Web Development'
+        />
+        <ListMatiere
+        navigation={this.props.navigation}
         dataMatiere={this.state.matieres}
         data={coursBusiness}
         title='E-Business'
         />
         <ListMatiere
+        navigation={this.props.navigation}
         dataMatiere={this.state.matieres}
         data={coursTrans}
          title='Enseignements transverses'
         />
         <ListMatiere
         dataMatiere={this.state.matieres}
-        data={coursDev}
-         title='Web Development'
-        />
-        <ListMatiere
-        dataMatiere={this.state.matieres}
+        navigation={this.props.navigation}
         data={coursDesign}
          title='Web Design'
         />
-        <View style={{paddingTop:200}}></View>
+        <View style={{height:100, top:100}}></View>
         </ScrollView>
         
 
