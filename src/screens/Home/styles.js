@@ -65,5 +65,9 @@ export default StyleSheet.create({
     margin: 40, 
     top: '10%', 
     color:'#343434' 
+   },
+   logoTopp:{
+    height:200,
+    width:360
    }
 });

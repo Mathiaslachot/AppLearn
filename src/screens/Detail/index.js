@@ -16,6 +16,7 @@ import imgBande from './../../../public/assets/images/bandeopacite.png';
 import imgDe from './../../../public/assets/images/bookopacite.png';
 import imgRectangle from './../../../public/assets/images/rectangle.png';
 import firebase from '../../module/Firebase';
+import iconIndicator from './../../../public/assets/images/leemonLoader.png';
 
 export default class Detail extends Component {
 
@@ -65,7 +66,7 @@ export default class Detail extends Component {
     if(this.state.isLoading){
       return(
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff"/>
+          <Image source={iconIndicator} style={styles.logoTopp} resizeMode="stretch" />
         </View>
       )
     }

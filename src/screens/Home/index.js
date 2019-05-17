@@ -9,12 +9,11 @@
 
 import React, {Component} from 'react';
 import { Text, ScrollView, ActivityIndicator, View, FlatList, TouchableOpacity, Image } from 'react-native';
-import { List, ListItem, Button, Icon  } from 'react-native-elements';
 import styles from './styles'
 import firebase from '../../module/Firebase';
 import imgTop from './../../../public/assets/images/illu.png';
 import ListMatiere from './../ListMatiere'
-
+import iconIndicator from './../../../public/assets/images/leemonLoader.png';
 
 export default class Home extends Component {
 
@@ -65,7 +64,7 @@ console.log({matieres})
     if(this.state.isLoading){
       return(
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff"/>
+          <Image source={iconIndicator} style={styles.logoTopp} resizeMode="stretch" />
         </View>
       )
     }

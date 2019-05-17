@@ -60,11 +60,12 @@ const App = createBottomTabNavigator(
             case 'Home':
               return <Image style={{height:20, width:20, top:'25%'}} source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconTopics.png?alt=media&token=15a24732-6834-43a2-b08b-34f7d1963356'}} />;
             case 'Zest':
-            return <Image style={{height:30, width:30, top:'13%'}} resizeMode='contain' source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/IconZest.png?alt=media&token=5b79f770-dedb-47fe-a7e5-5c3938aff333'}} />;
+            return <Image style={{height:30, width:30, top:'13%'}} resizeMode='contain' source={{uri:'https://firebasestorage.googleapis.com/v0/b/serviceapp-1f3c5.appspot.com/o/citron.png?alt=media&token=f7764fd2-9376-43c9-87e5-03c5fd76787f'}} />;
             default:
               break;
           
       }
+      console.log({routeName})
     }
     }),
     tabBarVisible: false,

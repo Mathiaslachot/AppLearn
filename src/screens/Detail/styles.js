@@ -100,4 +100,8 @@ export default StyleSheet.create({
     height: 100,
     width: '90%',
   },
+  logoTopp:{
+   height:200,
+   width:360
+  }
 });
